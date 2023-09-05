@@ -1,23 +1,26 @@
+// Home.tsx
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import Basic_card from "../components/Basic_card" // Importa el nuevo componente
+
+
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle>Ejercicios ionic 3 </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
+      <Basic_card
+          title="La Mona Lisa"
+          imageSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Leonardo_da_Vinci_-_Mona_Lisa_%28Louvre%2C_Paris%29.jpg/245px-Leonardo_da_Vinci_-_Mona_Lisa_%28Louvre%2C_Paris%29.jpg" // Reemplaza con la ruta de tu imagen
+          description="La Mona Lisa, también conocida como La Gioconda, es una famosa pintura renacentista creada por
+            Leonardo da Vinci en el siglo XVI. Es conocida por su enigmática sonrisa y su mirada enigmática."
+          redirectTo="/pagina-de-destino"
+        />
       </IonContent>
     </IonPage>
   );
